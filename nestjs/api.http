@@ -1,3 +1,26 @@
 GET http://localhost:3000
 
-1:14min
+###
+GET http://localhost:3000/routes
+
+###
+GET http://localhost:3000/routes/64e6ac8da2eaa3c10ca9a1fb
+
+###
+POST http://localhost:3000/routes/
+Content-Type: application/json
+
+{
+    "name": "Teste",
+    "source_id": "ChIJzYPNIyUZt5QRvF7b5t5e9Z0",
+    "destination_id": "ChIJqdNCvYIXt5QRU_Y4ImIDPWc"
+}
+
+
+### Google Maps
+
+### Pegar o place_id
+GET http://localhost:3000/places?text=rua Izoldina cândida de jesus, são sebastião do paraíso, mg
+
+### Pegar direções entre dois pontos
+GET http://localhost:3000/directions?originId=ChIJzYPNIyUZt5QRvF7b5t5e9Z0&destinationId=ChIJqdNCvYIXt5QRU_Y4ImIDPWc
